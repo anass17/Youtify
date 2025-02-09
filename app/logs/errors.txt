@@ -1,0 +1,20 @@
+
+Database -> Error in the SQL: PDOException: SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne « user_name » de la relation « users » n'existe pas
+LINE 1: INSERT INTO users (user_name, email, password) VALUES ($1,$2...
+                           ^ in C:\Apache24\htdocs\brief_12-Youtify\app\libraries\Database.php:128
+Stack trace:
+#0 C:\Apache24\htdocs\brief_12-Youtify\app\libraries\Database.php(128): PDOStatement->execute(Array)
+#1 C:\Apache24\htdocs\brief_12-Youtify\public\index.php(12): Database->insert('users', Array, Array)
+#2 {main} 
+-----------------------------------
+Database -> Error in the SQL: PDOException: SQLSTATE[42P01]: Undefined table: 7 ERREUR:  la relation « albums » n'existe pas
+LINE 1: SELECT * FROM albums
+                      ^ in C:\Apache24\htdocs\brief_12-Youtify\app\libraries\Database.php:89
+Stack trace:
+#0 C:\Apache24\htdocs\brief_12-Youtify\app\libraries\Database.php(89): PDOStatement->execute(NULL)
+#1 C:\Apache24\htdocs\brief_12-Youtify\app\models\Album.php(34): Database->selectAll('SELECT * FROM a...')
+#2 C:\Apache24\htdocs\brief_12-Youtify\app\controllers\AlbumController.php(6): Album::getAllAlbums()
+#3 C:\Apache24\htdocs\brief_12-Youtify\app\libraries\Router.php(33): AlbumController->index(0)
+#4 C:\Apache24\htdocs\brief_12-Youtify\public\index.php(15): Router->__construct()
+#5 {main} 
+-----------------------------------
